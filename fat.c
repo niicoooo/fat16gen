@@ -53,7 +53,7 @@ static inline uint32_t fatentry(const vfile_t *filesys, uint32_t cluster, uint32
     return 0x0FFFFFF8;
   if (cmp > 0)   // not last
     return cluster + 1;
-    return 0;    // after last -- mark as empty
+  return 0;    // after last -- mark as empty
 }
 
 int fat16(uint32_t blknum, uint8_t *buf, const vfile_t *filesys, uint32_t idx) {
